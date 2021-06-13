@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <!-- <title>Autocomplete Search Box | CodingNepal</title> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <title>Elasticsearch App!</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="search-input">
+      <input id="input--search" type="text" placeholder="Type to search.." onkeyup="search(this.value)">
+      <div id="autocom-box">
+        <!-- here list are inserted from javascript -->
+      </div>
+      <div id="icon" class="icon" onclick="_search()"><i class="fas fa-search"></i></div>
+    </div>
+    <div id="content_search"></div>
+  </div>
+  
+  <script src="./js/suggest.js"></script>
+  <script src="./js/search.js"></script>
+  <script src="./js/choose.js"></script>
+
+</body>
+
+</html>
