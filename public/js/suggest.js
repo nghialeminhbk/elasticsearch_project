@@ -9,7 +9,7 @@ function search(suggest){
         }else{
             auto.setAttribute('style','display: flex');
             var xmlhttp = new XMLHttpRequest();
-            var url = 'http://localhost:8080/elasticsearch-project/suggestion.php?suggest='+suggest;
+            var url = 'http://localhost:8080/elasticsearchMVC/SuggestController/index/'+suggest;
             xmlhttp.onreadystatechange = function(){
                 if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
                     auto.innerHTML = this.responseText;

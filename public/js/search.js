@@ -3,8 +3,8 @@ const inputBox = document.getElementById('input--search');
 const icon = document.getElementById('icon');
 
 function _search(page = 1){
-    var userData = inputBox.value;
-    if(userData){
+    var searchData = inputBox.value;
+    if(searchData){
         var xmlhttp = new XMLHttpRequest();
         document.getElementById('autocom-box').setAttribute('style', 'display: none');
         content.setAttribute('style', 'display: block');
@@ -13,7 +13,7 @@ function _search(page = 1){
                 content.innerHTML = this.responseText;
             }
         }
-        xmlhttp.open('GET',"search.php?search="+userData+"&page="+page, true);
+        xmlhttp.open('GET',"http://localhost:8080/elasticsearchMVC/SearchController/index/" + searchData + "/" + page, true);
         xmlhttp.send();
     }else{
         content.setAttribute('style', 'display: none');
